@@ -35,7 +35,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: cd product
+      - run: cd ./product
+      - run: pwd
       - run: npm i
       - run: npm run build
       - run: cp ./dist/* ../
