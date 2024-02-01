@@ -35,11 +35,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: cd ./product
-      - run: pwd
-      - run: npm i
-      - run: npm run build
-      - run: cp ./dist/* ../
+      - run: cd product && npm i
+      - run: cd product && npm run build
+      - run: cp ./product/dist/* ./
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
